@@ -3,11 +3,11 @@ import './product.css'
 
 class Products extends Component {
     state = {
-        count: 0,
-        productName: 'laptop'
+        count: this.props.count,
+        productName: this.props.productName
     }
     render() {
-        
+
         return (
             <div>
                 <span className='m-2 text-info'>{this.props.productName}</span>
