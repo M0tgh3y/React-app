@@ -7,14 +7,15 @@ class Products extends Component {
         productName: 'laptop'
     }
     render() {
+        
         return (
-            <>
-                <span className='m-2 text-info'>{this.state.productName}</span>
+            <div>
+                <span className='m-2 text-info'>{this.props.productName}</span>
                 <span className='m-2 badge bg-primary'>{this.state.count === 0 ? 'Zero' : this.state.count}</span>
                 <button onClick={this.handleIncrement} className='m-2 btn btn-sm btn-success'>+</button>
                 <button onClick={this.handleDecrement} className='m-2 btn btn-sm btn-warning'>-</button>
                 <button onClick={this.handleDelete} className='m-2 btn btn-sm btn-danger'>Delete</button>
-            </>
+            </div>
         );
     }
 
